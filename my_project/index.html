@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Precision CAD Solutions – Professional engineering drafting, CAD design, pressure vessel drawings, and 3D modeling for fabrication industries in India."/>
+  <title>Rural Core</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="logo.png" type="image/png"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- PAGE TRANSITION OVERLAY -->
+<div class="page-transition-overlay" id="pageTransition"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="nav-logo navbar-brand" href="#" onclick="showPage('home')">
+      <img src="logo.png" alt="Precision CAD Solutions" class="nav-logo-img"/>
+      <div class="logo-text">
+        <div class="lg-main">Ruralcore</div>
+        <div class="lg-sub">From Rural Roots to Global Engineering</div>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="#" onclick="showPage('home')">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('about')">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('services')">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('projects')">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showPage('contact')">Contact</a></li>
+        <li class="nav-item"><a class="nav-link btn-nav-cta" href="#" data-bs-toggle="modal" data-bs-target="#quoteModal">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ====== PAGE: HOME ====== -->
+<div id="page-home" class="page active">
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-cad-el gear"><svg width="280" height="280" viewBox="0 0 100 100" fill="rgba(255,255,255,1)"><path d="M43.3 5.8l-1.7 6.8a32 32 0 00-8.5 3.5l-6.3-3.3-9.2 9.2 3.3 6.3A32 32 0 0017.4 37l-6.8 1.7v13l6.8 1.7a32 32 0 003.5 8.5l-3.3 6.3 9.2 9.2 6.3-3.3A32 32 0 0041.6 77l1.7 6.8h13L58 77a32 32 0 008.5-3.5l6.3 3.3 9.2-9.2-3.3-6.3A32 32 0 0082.6 53l6.8-1.7v-13L82.6 37a32 32 0 00-3.5-8.5l3.3-6.3-9.2-9.2-6.3 3.3A32 32 0 0058.4 13l-1.7-6.8h-13zM50 30a20 20 0 110 40 20 20 0 010-40zm0 8a12 12 0 100 24 12 12 0 000-24z"/></svg></div>
+    <div class="hero-cad-el vessel"><svg width="150" height="220" viewBox="0 0 60 90" fill="none" stroke="rgba(255,255,255,1)" stroke-width="1.5"><ellipse cx="30" cy="15" rx="15" ry="6"/><rect x="15" y="15" width="30" height="55"/><ellipse cx="30" cy="70" rx="15" ry="6"/><line x1="30" y1="9" x2="30" y2="0"/><line x1="25" y1="32" x2="15" y2="32"/><line x1="35" y1="50" x2="45" y2="50"/></svg></div>
+    <div class="particles-wrap" id="particles"></div>
+    <div class="hero-content">
+
+      <div class="hero-badge"><span class="pulse-dot me-1"></span> Available for Projects &nbsp;·&nbsp; <i class="fas fa-drafting-compass"></i> Since 2026</div>
+      <h1 class="hero-title">Ruralcore Engineering<br>&amp; <span id="hero-typed">CAD Solutions</span><span class="hero-cursor"></span></h1>
+      <p class="hero-tagline">Expert CAD drafting, pressure vessel drawings, 3D modeling, and design documentation for fabrication industries across India and beyond.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary-cta btn-shimmer" data-bs-toggle="modal" data-bs-target="#quoteModal"><i class="fas fa-file-invoice me-2"></i>Get a Quote</button>
+        <button class="btn-outline-cta" onclick="showPage('services')"><i class="fas fa-cogs me-2"></i>Our Services</button>
+      </div>
+      <div class="mt-4 d-flex flex-wrap gap-2 justify-content-center" style="animation:fadeUp .9s ease .6s both">
+        <span class="trust-badge"><i class="fas fa-check-circle"></i> ASME Compliant</span>
+        <span class="trust-badge"><i class="fas fa-bolt"></i> 48hr Delivery</span>
+        <span class="trust-badge"><i class="fas fa-shield-alt"></i> NDA Protected</span>
+      </div>
+    </div>
+    <div class="scroll-indicator"><div class="scroll-mouse"><div class="scroll-dot"></div></div><span>Scroll</span></div>
+    <div class="hero-ticker"><div class="ticker-track" id="ticker">
+      <span class="ticker-item"><i class="fas fa-star"></i> AutoCAD 2D Drafting</span><span class="ticker-item"><i class="fas fa-star"></i> Pressure Vessel Redrawing</span><span class="ticker-item"><i class="fas fa-star"></i> Nozzle Orientation Drawings</span><span class="ticker-item"><i class="fas fa-star"></i> 3D Modeling &amp; Design</span><span class="ticker-item"><i class="fas fa-star"></i> BOM Preparation</span><span class="ticker-item"><i class="fas fa-star"></i> Drawing Revision Services</span><span class="ticker-item"><i class="fas fa-star"></i> AutoCAD 2D Drafting</span><span class="ticker-item"><i class="fas fa-star"></i> Pressure Vessel Redrawing</span><span class="ticker-item"><i class="fas fa-star"></i> Nozzle Orientation Drawings</span><span class="ticker-item"><i class="fas fa-star"></i> 3D Modeling &amp; Design</span><span class="ticker-item"><i class="fas fa-star"></i> BOM Preparation</span>
+    </div></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section-alt" id="home-services">
+    <div class="container">
+      <div class="text-center mb-5 reveal"><span class="section-label">What We Do</span><h2 class="section-title">Engineering Services</h2><div class="h-rule mx-auto"></div><p class="section-sub mx-auto">From detailed 2D drafting to complex 3D models, we deliver precision documentation your fabrication team can trust.</p></div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-flask"></i></div><div class="svc-card-num">01</div></div><h5>Pressure Vessel Redrawing</h5><p>Accurate redrawing of existing pressure vessel drawings with updated standards and nozzle orientations per ASME codes.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-drafting-compass"></i></div><div class="svc-card-num">02</div></div><h5>AutoCAD 2D Drafting</h5><p>Professional 2D CAD drafting for mechanical, structural and process equipment with ISO & ASME compliance.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-3"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-compass"></i></div><div class="svc-card-num">03</div></div><h5>Nozzle Orientation Drawings</h5><p>Detailed nozzle orientation and layout drawings for vessels, heat exchangers and storage tanks.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-cube"></i></div><div class="svc-card-num">04</div></div><h5>Product Design & 3D Modeling</h5><p>SolidWorks and Fusion 360 3D models for prototyping, visualization and manufacturing-ready output.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-list-alt"></i></div><div class="svc-card-num">05</div></div><h5>Bill of Materials (BOM)</h5><p>Structured and accurate BOM documentation for fabrication assemblies enabling smooth procurement.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+        <div class="col-md-6 col-lg-4 reveal reveal-delay-3"><div class="svc-card-v2"><div class="svc-card-icon-wrap"><div class="svc-card-icon"><i class="fas fa-file-alt"></i></div><div class="svc-card-num">06</div></div><h5>Fabrication Support</h5><p>On-site and remote fabrication support including shop drawings, weld maps and QA documentation.</p><a href="#" onclick="showPage('services')" class="svc-link"><span>Learn More</span> <i class="fas fa-arrow-right"></i></a></div></div>
+      </div>
+      <div class="text-center mt-5 reveal"><button class="btn-primary-cta" onclick="showPage('services')">View All Services <i class="fas fa-arrow-right ms-2"></i></button></div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section"><div class="container"><div class="text-center mb-5 reveal"><span class="section-label">Our Process</span><h2 class="section-title">How We Work</h2><div class="h-rule mx-auto"></div></div>
+    <div class="row process-steps g-4">
+      <div class="col-6 col-lg-3 process-step reveal reveal-delay-1"><div class="ps-num">01</div><h6>Share Requirements</h6><p>Send us sketches, PDFs or existing drawings.</p></div>
+      <div class="col-6 col-lg-3 process-step reveal reveal-delay-2"><div class="ps-num">02</div><h6>Review & Quote</h6><p>Transparent quote with timeline in 2 hours.</p></div>
+      <div class="col-6 col-lg-3 process-step reveal reveal-delay-3"><div class="ps-num">03</div><h6>Draft & Check</h6><p>Internal QC review against applicable standards.</p></div>
+      <div class="col-6 col-lg-3 process-step reveal reveal-delay-4"><div class="ps-num">04</div><h6>Deliver & Revise</h6><p>DWG, PDF, DXF. Free revisions included.</p></div>
+    </div>
+  </div></section>
+
+  <!-- WHY US -->
+  <section class="section section-alt"><div class="container"><div class="row align-items-center g-5">
+    <div class="col-lg-5 reveal"><span class="section-label">Why Choose Us</span><h2 class="section-title">Trusted by Fabrication Industries</h2><div class="h-rule"></div><p class="section-sub mb-4">Engineering expertise with Ruralcore drafting meeting international standards.</p><button class="btn-primary-cta" onclick="showPage('about')">Learn About Us</button></div>
+    <div class="col-lg-7"><div class="row g-3">
+      <div class="col-12 reveal reveal-delay-1"><div class="why-card"><div class="why-icon"><i class="fas fa-crosshairs"></i></div><div><h5>Industry-Grade Accuracy</h5><p>Every drawing checked against ASME, IS and client-specific standards.</p></div></div></div>
+      <div class="col-12 reveal reveal-delay-2"><div class="why-card"><div class="why-icon"><i class="fas fa-bolt"></i></div><div><h5>Fast Turnaround</h5><p>Urgent drawings delivered within 24-48 hours.</p></div></div></div>
+      <div class="col-12 reveal reveal-delay-3"><div class="why-card"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><div><h5>Confidentiality Assured</h5><p>Strict confidentiality backed by NDA.</p></div></div></div>
+      <div class="col-12 reveal reveal-delay-4"><div class="why-card"><div class="why-icon"><i class="fas fa-headset"></i></div><div><h5>Dedicated Support</h5><p>Single point of contact with the engineer.</p></div></div></div>
+    </div></div>
+  </div></div></section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section"><div class="container"><div class="text-center mb-5 reveal"><span class="section-label">Client Feedback</span><h2 class="section-title">What Our Clients Say</h2><div class="h-rule mx-auto"></div></div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal reveal-delay-1"><div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">"Ruralcore CAD Solutions delivered our pressure vessel project in under 48 hours. Spot-on dimensions and flawless docs."</p><div class="testimonial-author"><div class="ta-avatar">RS</div><div><div class="ta-name">Rajesh Sharma</div><div class="ta-role">GM, Bharat Fabricators</div></div></div></div></div>
+      <div class="col-md-4 reveal reveal-delay-2"><div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">"Their AutoCAD team is exceptional. Nozzle orientation drawings prepared exactly to our requirements."</p><div class="testimonial-author"><div class="ta-avatar">PK</div><div><div class="ta-name">Priya Krishnan</div><div class="ta-role">Engineer, TechnoVap Systems</div></div></div></div></div>
+      <div class="col-md-4 reveal reveal-delay-3"><div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p class="testimonial-text">"The 3D model for our custom valve was incredibly detailed. Saved us weeks in prototyping."</p><div class="testimonial-author"><div class="ta-avatar">AM</div><div><div class="ta-name">Amit Mehta</div><div class="ta-role">MD, Meridian Engineering</div></div></div></div></div>
+    </div>
+  </div></section>
+
+  <!-- CTA -->
+  <section class="cta-banner"><div class="container position-relative" style="z-index:1"><div class="row align-items-center">
+    <div class="col-lg-7 text-white mb-4 mb-lg-0 reveal"><span class="section-label" style="color:var(--accent)">Start Your Project</span><h2 class="section-title text-white">Have a Drawing Requirement?<br>Let's Get It Done Right.</h2></div>
+    <div class="col-lg-5 text-lg-end reveal"><button class="btn-accent me-3 mb-2" data-bs-toggle="modal" data-bs-target="#quoteModal"><i class="fas fa-paper-plane me-2"></i>Request a Quote</button><button class="btn-outline-cta" onclick="showPage('contact')">Contact Us</button></div>
+  </div></div></section>
+</div>
+
+<!-- ====== PAGE: ABOUT ====== -->
+<div id="page-about" class="page">
+  <div class="page-hero"><div class="container page-hero-content"><span class="section-label">Who We Are</span><h1>About Ruralcore Engineering</h1><p class="mt-3">Engineering excellence rooted in precision, integrity, and quality documentation.</p></div></div>
+  <section class="section"><div class="container"><div class="row g-5 align-items-center">
+    <div class="col-lg-6 reveal"><span class="section-label">Our Story</span><h2 class="section-title">Serving Industry With Ruralcore Since 2026</h2><div class="h-rule"></div><p style="color:var(--gray-lt);line-height:1.8">Founded in 2026 in Chennai, Ruralcore CAD Solutions started with a vision to provide high-quality CAD drafting and engineering documentation services for the manufacturing and fabrication industry.</p><p style="color:var(--gray-lt);line-height:1.8">From supporting local pressure vessel manufacturers to serving fabricators, EPC contractors, and process equipment companies, Ruralcore has rapidly grown into a trusted engineering solutions partner.</p> <p style="color:var(--gray-lt);line-height:1.8"> We specialize in delivering precise, industry-standard, and production-ready drawings with a strong focus on accuracy, quality, and on-time delivery. Our commitment to technical excellence and client satisfaction helps industries streamline design, fabrication, and documentation processes efficiently.</p></div>
+    <div class="col-lg-6 reveal">
+      <div class="about-visual">
+        <div class="about-grid-bg"></div>
+        <div class="about-visual-inner">
+          <div class="about-logo-showcase">
+            <!-- Rotating outer ring -->
+            <div class="logo-ring logo-ring-outer"></div>
+            <!-- Rotating inner ring -->
+            <div class="logo-ring logo-ring-inner"></div>
+            <!-- Pulsing glow -->
+            <div class="logo-glow"></div>
+            <!-- Orbit dots -->
+            <div class="logo-orbit-dot dot-1"></div>
+            <div class="logo-orbit-dot dot-2"></div>
+            <div class="logo-orbit-dot dot-3"></div>
+            <!-- The actual logo -->
+            <div class="logo-center">
+              <img src="logo.png" alt="Precision CAD Solutions"/>
+            </div>
+          </div>
+          <p class="about-logo-label">Ruralcore Engineering</p>
+          <p class="about-logo-sublabel">Engineering Excellence Since 2026</p>
+        </div>
+      </div>
+    </div>
+  </div></div></section>
+  <section class="section section-alt"><div class="container"><div class="text-center mb-5 reveal"><span class="section-label">Our Foundation</span><h2 class="section-title">Mission & Vision</h2><div class="h-rule mx-auto"></div></div>
+    <div class="row g-4">
+      <div class="col-md-4 reveal reveal-delay-1"><div class="mv-card"><div class="mv-icon"><i class="fas fa-bullseye"></i></div><h4>Our Mission</h4><p>To deliver precision-engineered CAD documentation that empowers fabrication companies to build confidently.</p></div></div>
+      <div class="col-md-4 reveal reveal-delay-2"><div class="mv-card"><div class="mv-icon"><i class="fas fa-eye"></i></div><h4>Our Vision</h4><p>To be India's most trusted engineering drafting partner — recognized for unmatched accuracy.</p></div></div>
+      <div class="col-md-4 reveal reveal-delay-3"><div class="mv-card"><div class="mv-icon"><i class="fas fa-heart"></i></div><h4>Our Values</h4><p>Accuracy over speed. Transparency. Commitment to deadlines. Respect for client IP.</p></div></div>
+    </div>
+  </div></section>
+  <section class="section"><div class="container"><div class="row g-5">
+    <div class="col-lg-5 reveal"><span class="section-label">Technical Expertise</span><h2 class="section-title">Skills & Competencies</h2><div class="h-rule"></div></div>
+    <div class="col-lg-7 reveal">
+      <div class="skill-bar-wrap"><div class="skill-label"><span>AutoCAD 2D Drafting</span><span>97%</span></div><div class="skill-bar"><div class="skill-fill" style="--w:97%"></div></div></div>
+      <div class="skill-bar-wrap"><div class="skill-label"><span>SolidWorks 3D Modeling</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div></div>
+      <div class="skill-bar-wrap"><div class="skill-label"><span>Pressure Vessel (ASME)</span><span>92%</span></div><div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div></div>
+      <div class="skill-bar-wrap"><div class="skill-label"><span>Fusion 360 / Inventor</span><span>82%</span></div><div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div></div>
+      <div class="skill-bar-wrap"><div class="skill-label"><span>BOM & Documentation</span><span>95%</span></div><div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div></div>
+    </div>
+  </div></div></section>
+</div>
+
+<!-- ====== PAGE: SERVICES ====== -->
+<div id="page-services" class="page">
+  <div class="page-hero"><div class="container page-hero-content"><span class="section-label">What We Offer</span><h1>Engineering Services</h1><p class="mt-3">Comprehensive CAD drafting and engineering documentation for fabrication and industrial sectors.</p></div></div>
+  <section class="section"><div class="container"><div class="row g-4">
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-flask"></i></div><h4>Pressure Vessel Redrawing</h4></div><div class="sfc-body"><p>We redraw existing pressure vessel GA drawings using updated dimensions and applicable standards.</p><ul class="benefit-list"><li>ASME Sec VIII & IS 2825</li><li>Updated nozzle schedules</li><li>DWG, PDF, DXF formats</li><li>24–72 hour turnaround</li></ul></div></div></div>
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-drafting-compass"></i></div><h4>AutoCAD 2D Drafting</h4></div><div class="sfc-body"><p>Precision 2D drafting for GA, fabrication, assembly drawings from sketches or PDFs.</p><ul class="benefit-list"><li>ISO 128 / ISO 10209</li><li>Multi-view projections</li><li>Clean layer structures</li><li>Revision tracking</li></ul></div></div></div>
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-3"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-compass"></i></div><h4>Nozzle Orientation</h4></div><div class="sfc-body"><p>Detailed nozzle orientation drawings for vessels, columns and heat exchangers.</p><ul class="benefit-list"><li>Plan & elevation views</li><li>ANSI/ASME flanges</li><li>P&ID coordination</li><li>Coordinate dimensioning</li></ul></div></div></div>
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-1"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-cube"></i></div><h4>3D Modeling</h4></div><div class="sfc-body"><p>Parametric 3D models in SolidWorks or Fusion 360 for custom components.</p><ul class="benefit-list"><li>Interference check</li><li>Photorealistic renders</li><li>STEP / IGES / STL</li><li>Design for manufacturing</li></ul></div></div></div>
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-2"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-list-alt"></i></div><h4>BOM Preparation</h4></div><div class="sfc-body"><p>Structured BOM from assemblies or 3D models with material specs.</p><ul class="benefit-list"><li>Multi-level BOM</li><li>Excel / CSV outputs</li><li>ERP/SAP-ready</li><li>Title block integration</li></ul></div></div></div>
+    <div class="col-md-6 col-lg-4 reveal reveal-delay-3"><div class="service-feature-card"><div class="sfc-header"><div class="sfc-icon"><i class="fas fa-file-alt"></i></div><h4>Drawing Revision</h4></div><div class="sfc-body"><p>Incorporating red-line markups and site modifications into CAD drawings.</p><ul class="benefit-list"><li>Revision cloud marking</li><li>As-built preparation</li><li>Full audit trail</li><li>PDF + DWG deliverables</li></ul></div></div></div>
+  </div></div></section>
+</div>
+
+<!-- ====== PAGE: PROJECTS ====== -->
+<div id="page-projects" class="page">
+  <div class="page-hero"><div class="container page-hero-content"><span class="section-label">Our Work</span><h1>Project Portfolio</h1><p class="mt-3">Ruralcore engineering projects delivered across India's fabrication industry. Click any project to view details and PDF drawings.</p></div></div>
+  <section class="section"><div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Horizontal Heat Exchanger – GA Drawing" data-cat="Pressure Vessel" data-desc="Full GA drawing for a shell & tube heat exchanger with nozzle schedule, saddle detail, and complete BOM for a petrochemical client in Gujarat. Delivered per ASME Sec VIII Div 1 standards." data-specs="Standard: ASME Sec VIII | Format: DWG + PDF | Delivery: 48 hrs | Nozzles: 12" data-pdf="/Doc/Pressure Vessel.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg"><i class="fas fa-flask"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">Pressure Vessel</span><h5>Horizontal Heat Exchanger</h5><p>GA Drawing with nozzle schedule and BOM</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Custom Valve Assembly – SolidWorks" data-cat="3D Modeling" data-desc="Full 3D parametric model of a gate valve assembly including BOM, exploded view drawing, and rendered visualizations for a valve manufacturer in Coimbatore." data-specs="Software: SolidWorks 2023 | Parts: 24 | Renders: 6 | Delivery: 5 days" data-pdf="/Doc/3D.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg" style="background:linear-gradient(135deg,#051020,#1a3a6b)"><i class="fas fa-cube"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">3D Modeling</span><h5>Custom Valve Assembly</h5><p>SolidWorks model with exploded views</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Vertical Storage Tank – Structural Drawings" data-cat="AutoCAD Drafting" data-desc="Complete structural drawing set for a 5000 KL vertical fixed roof storage tank including foundation layout, shell plates, roof structure, staircase, and platform details." data-specs="Capacity: 5000 KL | Standard: API 650 | Sheets: 18 | Delivery: 7 days" data-pdf="/Doc/AutoCAD.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg" style="background:linear-gradient(135deg,#0d1f35,#0b2d5a)"><i class="fas fa-drafting-compass"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">AutoCAD Drafting</span><h5>Vertical Storage Tank</h5><p>Structural drawing set with foundation layout</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-1">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Distillation Column – Nozzle Orientation" data-cat="Nozzle Drawing" data-desc="Nozzle orientation drawing for a 22-meter distillation column with 18 nozzles, coordinate dimensioning from datum, and P&ID correlation tags." data-specs="Height: 22m | Nozzles: 18 | Standard: ASME B16.5 | Delivery: 3 days" data-pdf="/Doc/Noz.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg" style="background:linear-gradient(135deg,#0a1828,#162d50)"><i class="fas fa-compass"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">Nozzle Drawing</span><h5>Distillation Column</h5><p>Nozzle orientation with P&amp;ID correlation</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-2">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Multi-Vessel Package – BOM & Drawing Set" data-cat="BOM Preparation" data-desc="Multi-vessel package documentation for an EPC contractor. 12 vessels with complete BOM, material take-off sheets, and drawing register for IOCL." data-specs="Vessels: 12 | Documents: 48 | Format: Excel + PDF | Client: IOCL" data-pdf="/Doc/BOM.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg" style="background:linear-gradient(135deg,#071525,#0e2545)"><i class="fas fa-list-alt"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">BOM Preparation</span><h5>Multi-Vessel Package</h5><p>12-vessel documentation for EPC contractor</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal reveal-delay-3">
+        <div class="project-card-v2" onclick="openProject(this)" data-title="Agitator Drive Assembly – 3D Model" data-cat="Product Design" data-desc="Complete agitator assembly 3D model with drive shaft, seal housing, impeller blades, and mechanical seal with DFM report." data-specs="Software: SolidWorks | Parts: 18 | DFM Report: Yes | Delivery: 6 days" data-pdf="/Doc/Product.pdf">
+          <div class="proj-v2-accent"></div><div class="proj-v2-bg" style="background:linear-gradient(135deg,#0c1a2e,#153055)"><i class="fas fa-cog"></i></div><div class="proj-v2-pattern"></div>
+          <div class="proj-v2-content"><span class="proj-v2-tag">Product Design</span><h5>Agitator Drive Assembly</h5><p>Complete 3D model with DFM report</p>
+            <div class="proj-v2-actions"><span class="proj-v2-action"><i class="fas fa-eye me-1"></i> View Details</span><span class="proj-v2-pdf"><i class="fas fa-file-pdf me-1"></i> View PDF</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- PROJECT DETAIL MODAL WITH PDF VIEWER -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content project-modal-content">
+      <div class="modal-header project-modal-header">
+        <div><span class="proj-modal-tag" id="projModalTag"></span><h5 class="modal-title" id="projModalTitle"></h5></div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p id="projModalDesc" style="color:var(--gray-lt);line-height:1.8;font-size:.95rem"></p>
+        <div class="proj-modal-specs" id="projModalSpecs"></div>
+        <!-- PDF VIEWER -->
+        <div class="pdf-viewer-section" id="pdfViewerSection" style="display:none">
+          <h6 style="font-family:var(--font-head);color:var(--navy);margin:1.5rem 0 .8rem"><i class="fas fa-file-pdf me-2" style="color:#dc2626"></i>Project Drawing (PDF)</h6>
+          <div class="pdf-viewer-wrap">
+            <iframe id="pdfViewerFrame" src="" style="width:100%;height:500px;border:none;border-radius:8px"></iframe>
+          </div>
+          <div class="pdf-actions mt-3">
+            <a id="pdfDownloadLink" href="#" target="_blank" class="btn-primary-cta" style="font-size:.9rem;padding:.6rem 1.5rem"><i class="fas fa-download me-2"></i>Download PDF</a>
+            <a id="pdfOpenLink" href="#" target="_blank" class="btn-outline-dark" style="font-size:.9rem;padding:.6rem 1.5rem"><i class="fas fa-external-link-alt me-2"></i>Open in New Tab</a>
+          </div>
+        </div>
+        <!-- No PDF message -->
+        <div id="noPdfMessage" style="display:none" class="no-pdf-msg">
+          <i class="fas fa-info-circle"></i>
+          <p>PDF drawing will be available soon. <a href="#" data-bs-toggle="modal" data-bs-target="#quoteModal" data-bs-dismiss="modal">Contact us</a> for drawing samples.</p>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn-primary-cta" data-bs-toggle="modal" data-bs-target="#quoteModal" data-bs-dismiss="modal"><i class="fas fa-paper-plane me-2"></i>Request Similar Project</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== PAGE: CONTACT ====== -->
+<div id="page-contact" class="page">
+  <div class="page-hero"><div class="container page-hero-content"><span class="section-label">Get In Touch</span><h1>Contact Us</h1><p class="mt-3">Reach out with your project requirements and we'll respond within 2 business hours.</p></div></div>
+  <section class="section"><div class="container"><div class="row g-4 align-items-start">
+    <div class="col-lg-4 reveal"><div class="contact-info-card">
+      <h4 style="color:#fff;font-family:var(--font-head);font-size:1.4rem;margin-bottom:1.5rem">Contact Information</h4>
+      <div class="ci-item"><div class="ci-icon"><i class="fas fa-phone"></i></div><div><div class="ci-label">Phone</div><div class="ci-value">+91 9655614298</div></div></div>
+      <div class="ci-item"><div class="ci-icon"><i class="fas fa-envelope"></i></div><div><div class="ci-label">Email</div><div class="ci-value">ruralcoreengg@gmail.com</div></div></div>
+      <div class="ci-item"><div class="ci-icon"><i class="fas fa-map-marker-alt"></i></div><div><div class="ci-label">Office</div><div class="ci-value">Panjukalipatty , omalur<br>Salem 636455</div></div></div>
+      <div class="ci-item"><div class="ci-icon"><i class="fas fa-clock"></i></div><div><div class="ci-label">Hours</div><div class="ci-value">Mon–Sat: 9 AM – 7 PM IST</div></div></div>
+      <hr style="border-color:rgba(255,255,255,.1)"/>
+      <div class="social-links"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+    </div></div>
+    <div class="col-lg-8 reveal"><div class="contact-form-card">
+      <h4 style="font-family:var(--font-head);font-size:1.6rem;color:var(--navy)">Send Us Your Requirements</h4>
+      <p style="color:var(--gray-lt);font-size:.9rem;margin-bottom:1.8rem">Fill in the form and we'll respond with a quote shortly.</p>
+      <form id="contactForm" onsubmit="return handleFormSubmit(event,'contactForm')"><div class="row g-3">
+        <div class="col-md-6"><label class="form-label">Full Name *</label><input type="text" name="name" class="form-control" placeholder="Your Name" required/></div>
+        <div class="col-md-6"><label class="form-label">Email *</label><input type="email" name="email" class="form-control" placeholder="you@company.com" required/></div>
+        <div class="col-md-6"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-control" placeholder="+91 98765 43210"/></div>
+        <div class="col-md-6"><label class="form-label">Company</label><input type="text" name="company" class="form-control" placeholder="Company Name"/></div>
+        <div class="col-12"><label class="form-label">Service</label><select name="service" class="form-select"><option value="" disabled selected>Select a service...</option><option>CAD Design</option><option>Drafting</option><option>3D Modeling</option><option>Fabrication Drawing</option><option>BOM Preparation</option><option>Other</option></select></div>
+        <div class="col-12"><label class="form-label">Project Description *</label><textarea name="message" class="form-control" rows="5" placeholder="Describe your requirements..." required></textarea></div>
+        <div class="col-12"><button type="submit" class="btn-submit w-100" id="contactSubmitBtn"><i class="fas fa-paper-plane me-2"></i>Send Message</button></div>
+      </div><div class="form-alert mt-3" id="contactFormAlert"></div></form>
+    </div></div>
+  </div>
+   <!-- <div class="mt-4 reveal"><div class="map-embed"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1672843427!2d80.15498731482242!3d13.10178999076934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5264f8e4d27fcf%3A0x3174e76bde5e1d9f!2sAmbattur+Industrial+Estate!5e0!3m2!1sen!2sin" width="100%" height="380" style="border:0;display:block" allowfullscreen="" loading="lazy" title="Location"></iframe></div></div> -->
+  </div></section>
+</div>
+
+<!-- FOOTER -->
+<footer><div class="container"><div class="row g-4">
+  <div class="col-lg-4 col-md-6"><a class="nav-logo footer-logo mb-3" href="#" onclick="showPage('home')" style="display:inline-flex"><img src="logo.png" alt="Logo" class="nav-logo-img footer-logo-img"/><div class="logo-text"><div class="lg-main">Ruralcore </div><div class="lg-sub">From Rural Roots to Global Engineering</div></div></a><p class="mt-2">Ruralcore Engineering & CAD Solutions for India's fabrication industry. Trusted since 2026.</p><div class="social-links mt-3"><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a></div></div>  
+  <div class="col-lg-2 col-md-6"><h5>Quick Links</h5><a href="#" onclick="showPage('home')">Home</a><a href="#" onclick="showPage('about')">About Us</a><a href="#" onclick="showPage('services')">Services</a><a href="#" onclick="showPage('projects')">Projects</a><a href="#" onclick="showPage('contact')">Contact</a></div>
+  <div class="col-lg-3 col-md-6"><h5>Services</h5><a href="#" onclick="showPage('services')">Pressure Vessel Redrawing</a><a href="#" onclick="showPage('services')">AutoCAD 2D Drafting</a><a href="#" onclick="showPage('services')">Nozzle Orientation</a><a href="#" onclick="showPage('services')">3D Modeling & Design</a><a href="#" onclick="showPage('services')">BOM Preparation</a></div>
+  <div class="col-lg-3 col-md-6"><h5>Contact</h5><p><i class="fas fa-map-marker-alt me-2" style="color:var(--blue-lt)"></i>Panjukalipatty , omalur <br>&nbsp;&nbsp;&nbsp;&nbsp;Salem  – 636455, India</p><p class="mt-2"><i class="fas fa-phone me-2" style="color:var(--blue-lt)"></i>+91 9655614298</p><p class="mt-1"><i class="fas fa-envelope me-2" style="color:var(--blue-lt)"></i>ruralcoreengg@gmail.com</p></div>
+</div><hr class="footer-divider"/><div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center"><span>&copy; 2026 Ruralcore Engineering. All rights reserved.</span><span>Designed with <i class="fas fa-heart" style="color:#ef4444"></i> for Engineering</span></div></div></footer>
+
+<!-- QUOTE MODAL -->
+<div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title" id="quoteModalLabel"><i class="fas fa-file-invoice me-2" style="color:var(--blue-lt)"></i>Request a Quote</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body"><p style="color:var(--gray-lt);font-size:.9rem;margin-bottom:1.5rem">Tell us about your project and we'll respond within 2 business hours.</p>
+      <form id="quoteForm" onsubmit="return handleFormSubmit(event,'quoteForm')"><div class="row g-3">
+        <div class="col-md-6"><label class="form-label">Full Name *</label><input type="text" name="name" class="form-control" placeholder="Your Name" required/></div>
+        <div class="col-md-6"><label class="form-label">Email *</label><input type="email" name="email" class="form-control" placeholder="you@company.com" required/></div>
+        <div class="col-md-6"><label class="form-label">Phone</label><input type="tel" name="phone" class="form-control" placeholder="+91 XXXXX XXXXX"/></div>
+        <div class="col-md-6"><label class="form-label">Company</label><input type="text" name="company" class="form-control" placeholder="Company Name"/></div>
+        <div class="col-12"><label class="form-label">Service</label><select name="service" class="form-select"><option disabled selected>Select...</option><option>CAD Design</option><option>Drafting</option><option>3D Modeling</option><option>Fabrication Drawing</option><option>BOM Preparation</option><option>Other</option></select></div>
+        <div class="col-12"><label class="form-label">Project Brief *</label><textarea name="message" class="form-control" rows="4" placeholder="Describe your requirements..." required></textarea></div>
+        <div class="col-12"><button type="submit" class="btn-submit w-100" id="quoteSubmitBtn"><i class="fas fa-paper-plane me-2"></i>Submit Quote Request</button></div>
+      </div><div class="form-alert mt-3" id="quoteFormAlert"></div></form>
+    </div>
+  </div></div>
+</div>
+
+<script>
+function handleFormSubmit(event, formId) {
+    event.preventDefault(); // This stops the page from refreshing
+
+    const form = document.getElementById(formId);
+    const alertDiv = document.getElementById(formId + 'Alert');
+    const formData = new FormData(form);
+    
+    // Convert form data to a format PHP understands
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('save.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alertDiv.innerHTML = '<p style="color:green;">' + result.message + '</p>';
+            form.reset();
+        } else {
+            alertDiv.innerHTML = '<p style="color:red;">Error: ' + result.message + '</p>';
+        }
+    })
+    .catch(err => {
+        alertDiv.innerHTML = '<p style="color:red;">Server error. Make sure XAMPP is running!</p>';
+    });
+
+    return false;
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
